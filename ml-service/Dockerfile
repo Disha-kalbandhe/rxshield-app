@@ -1,5 +1,8 @@
 FROM python:3.10-slim
 
+# Switch to root user to install dependencies
+USER root
+
 # Install system deps: tesseract + Hindi + Marathi language packs
 RUN apt-get update && apt-get install -y \
     tesseract-ocr \
